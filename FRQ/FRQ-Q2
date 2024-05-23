@@ -1,1 +1,39 @@
-
+public class Scoreboard {
+   private String team1;
+   private String team2;
+   private int s1;
+   private int s2;
+   Boolean active = true;
+  
+  
+   public Scoreboard(String t1,String t2){
+       team1 = t1;
+       team2 = t2;
+       s1 = 0;
+       s2 = 0;
+       Boolean active = true;
+   }
+public void recordPlay(int points) {
+    if(active == true){
+        if(points > 0){
+          s1 += points;
+        }
+        else{
+              active  = false;
+        }
+    }   
+     else{
+     if(points > 0){
+         s2 += points;        
+     }
+       else{
+         active = true;
+     }
+    }
+}
+    public String getScore(){
+     
+        return s1 + "-" + s2 + "-"+team1;
+    }
+     
+}
