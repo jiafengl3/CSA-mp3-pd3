@@ -1,1 +1,32 @@
+public class Feeder{
+   private int currentFood;
+
+   public Feeder(int f){
+   currentFood = f;
+ }
+
+  public int simulateManyDays(int numBirds){
+
+      //int total =(int)(Math.random()*100 + 1)
+      int pool1 =(int)(Math.random()*50-10+1) + 10;
+      int totalFood = numBirds * pool1;
+
+    if(Math.random()< 0.05){
+      currentFood = 0;
+    } 
+      else{
+        if(totalFood <= currentFood){
+           currentFood -= totalFood;
+        }
+        else{
+          currentFood = 0;
+        }
+        }
+  }
+ 
+
+    public int getCurrentFood(){
+      return currentFood;
+    }
+}
 
