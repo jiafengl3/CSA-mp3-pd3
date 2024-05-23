@@ -38,3 +38,7 @@ public class GridPath {
    }
    }
    }
+
+
+This question is about the 2D Array. Add the smaller number between right or bottom. If the right haven't number, return the bottom,and so on.
+Struggle with this code: get the length of Row and Col. 
